@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueCarbon - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Glass Effect Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-navbar" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="brand-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <span class="brand-text">BlueCarbon</span>
+            </a>
+            
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Explorer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <button class="settings-btn" id="darkToggle" aria-label="Toggle Dark Mode">
+                        <div class="dots-grid">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                    </button>
+                    <button class="btn btn-connect">Connect Wallet</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h3>DASHBOARD</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" data-section="overview" class="sidebar-link active">
+                        <i class="fas fa-th-large"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="projects" class="sidebar-link">
+                        <i class="fas fa-folder"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="verification" class="sidebar-link">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Verification</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="settings" class="sidebar-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="dashboard-section-header">
+                    <div>
+                        <h1>Overview</h1>
+                        <p class="section-subtitle">Portfolio health, verification status, and credit lifecycle at a glance.</p>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="dashboard-stats-grid">
+                    <div class="dashboard-stat-card">
+                        <div class="stat-content">
+                            <p class="stat-label">Active projects</p>
+                            <h2 class="stat-value">24</h2>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-content">
+                            <p class="stat-label">CO₂e sequestered</p>
+                            <h2 class="stat-value">3.98M kg</h2>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-content">
+                            <p class="stat-label">Credits minted</p>
+                            <h2 class="stat-value">1.25M</h2>
+                        </div>
+                    </div>
+                    <div class="dashboard-stat-card">
+                        <div class="stat-content">
+                            <p class="stat-label">Verification requests</p>
+                            <h2 class="stat-value">12</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="dashboard-content-grid">
+                    <div class="dashboard-activity-card">
+                        <h3>Recent verification activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-content">
+                                    <p class="activity-title">Sundarbans - biomass update signed on-chain</p>
+                                </div>
+                                <span class="dashboard-status-badge verified">Verified</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-content">
+                                    <p class="activity-title">Kutch - drone imagery validated</p>
+                                </div>
+                                <span class="dashboard-status-badge verified">Verified</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-content">
+                                    <p class="activity-title">Andhra Pradesh - IoT sensor reconciliation</p>
+                                </div>
+                                <span class="dashboard-status-badge verified">Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-lifecycle-card">
+                        <h3>Credit lifecycle</h3>
+                        <p class="lifecycle-description">
+                            Minting, trading, and retirement events automated by smart contracts on Polygon.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="dashboard-section">
+                <div class="dashboard-section-header">
+                    <div>
+                        <h1>Projects</h1>
+                        <p class="section-subtitle">This dashboard section is ready to be customized. Tell me what you want here.</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-empty-state">
+                    <div class="empty-state-content">
+                        <div class="empty-state-icon">
+                            <i class="fas fa-folder-plus"></i>
+                        </div>
+                        <h3>Ready for Customization</h3>
+                        <!--add description using p tag-->
+                        <button class="btn btn-primary" id="add-new-project">Add New Project</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Verification Section -->
+            <section id="verification" class="dashboard-section">
+                <div class="dashboard-verification-header">
+                    <div class="verification-title">
+                        <h1>Verification</h1>
+                        <p class="section-subtitle">Cross-reference submissions and anchor signed results on-chain.</p>
+                    </div>
+                    <button class="btn-open-logs">Open verification logs</button>
+                </div>
+
+                <!-- Filters Section -->
+                <div class="dashboard-filters-section">
+                    <h3>Filters</h3>
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label>Status</label>
+                            <select class="filter-select">
+                                <option>All</option>
+                                <option>Pending</option>
+                                <option>In review</option>
+                                <option>Verified</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Ecosystem</label>
+                            <select class="filter-select">
+                                <option>All</option>
+                                <option>Mangrove</option>
+                                <option>Seagrass</option>
+                                <option>Salt Marsh</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Search</label>
+                            <input type="text" class="filter-search" placeholder="Search by project or submission ID">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submissions Table -->
+                <div class="dashboard-submissions-section">
+                    <h3>Submissions</h3>
+                    <div class="submissions-table">
+                        <div class="table-header">
+                            <div class="header-cell">Project</div>
+                            <div class="header-cell">Submitted</div>
+                            <div class="header-cell">Source</div>
+                            <div class="header-cell">Status</div>
+                            <div class="header-cell">Actions</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="project-name">Sundarbans Community Project</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="submitted-date">2025-08-12</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="source">Drone imagery</div>
+                            </div>
+                            <div class="table-cell">
+                                <span class="dashboard-status-badge pending">Pending</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="actions">
+                                    <button class="dashboard-action-btn compare">Compare</button>
+                                    <button class="dashboard-action-btn verify">Verify & Anchor</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="project-name">Kutch Seagrass Mapping</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="submitted-date">2025-08-10</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="source">Satellite</div>
+                            </div>
+                            <div class="table-cell">
+                                <span class="dashboard-status-badge in-review">In review</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="actions">
+                                    <button class="dashboard-action-btn compare">Compare</button>
+                                    <button class="dashboard-action-btn verify">Verify & Anchor</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell">
+                                <div class="project-name">Andhra Mangrove Restoration</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="submitted-date">2025-08-09</div>
+                            </div>
+                            <div class="table-cell">
+                                <div class="source">IoT sensors</div>
+                            </div>
+                            <div class="table-cell">
+                                <span class="dashboard-status-badge pending">Pending</span>
+                            </div>
+                            <div class="table-cell">
+                                <div class="actions">
+                                    <button class="dashboard-action-btn compare">Compare</button>
+                                    <button class="dashboard-action-btn verify">Verify & Anchor</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="dashboard-bottom-section">
+                    <div class="dashboard-recent-anchors">
+                        <h3>Recent on-chain anchors</h3>
+                        <div class="anchor-list">
+                            <div class="anchor-item">
+                                <div class="anchor-text">
+                                    <span class="tx-hash">Txn 0x91a...f2e</span>
+                                    <span class="separator">•</span>
+                                    <span class="description">Sundarbans biomass update</span>
+                                    <span class="separator">•</span>
+                                    <span class="network">Polygon</span>
+                                </div>
+                            </div>
+                            <div class="anchor-item">
+                                <div class="anchor-text">
+                                    <span class="tx-hash">Txn 0x7be...10c</span>
+                                    <span class="separator">•</span>
+                                    <span class="description">Kutch drone imagery digest</span>
+                                    <span class="separator">•</span>
+                                    <span class="network">Polygon</span>
+                                </div>
+                            </div>
+                            <div class="anchor-item">
+                                <div class="anchor-text">
+                                    <span class="tx-hash">Txn 0x2dc...9a0</span>
+                                    <span class="separator">•</span>
+                                    <span class="description">Andhra IoT readings summary</span>
+                                    <span class="separator">•</span>
+                                    <span class="network">Polygon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-verification-policy">
+                        <h3>Verification policy</h3>
+                        <p>Define rules for automated cross-referencing and threshold alerts. Contact us to integrate custom policy engines.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="dashboard-section">
+                <div class="dashboard-section-header">
+                    <div>
+                        <h1>Settings</h1>
+                        <p class="section-subtitle">Manage organization profile, security, notifications, and integrations.</p>
+                    </div>
+                </div>
+
+                <!-- Organization Profile -->
+                <div class="dashboard-settings-card">
+                    <h3>Organization profile</h3>
+                    <div class="profile-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-input" placeholder= "e.g., NCCR India" >
+                            </div>
+                            <div class="form-group">
+                                <label>Contact email</label>
+                                <input type="email" class="form-input" placeholder="admin@example.org" ><!--add value="123@gmail.com "-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Region</label>
+                            <select class="form-select">
+                                <option selected>India</option>
+                                <option>APAC</option>
+                                <option>Global</option>
+                                
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Save profile</button>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="dashboard-settings-card">
+                    <h3>Security</h3>
+                    <div class="security-options">
+                        <div class="security-row">
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4>Two-factor authentication</h4>
+                                    <p class="security-description">Require 2FA for all admins</p>
+                                </div>
+                                <label class="dashboard-toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="dashboard-toggle-slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4>Enforce strong passwords</h4>
+                                    <p class="security-description">Minimum length, symbols, rotation</p>
+                                </div>
+                                <label class="dashboard-toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="dashboard-toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline">Update security</button>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div class="dashboard-settings-card">
+                    <h3>Notifications</h3>
+                    <div class="notification-options">
+                        <div class="notification-row">
+                            <div class="notification-item">
+                                <div class="notification-info">
+                                    <h4>Verification events</h4>
+                                    <p class="notification-description">Notify when submissions are ready to review</p>
+                                </div>
+                                <label class="dashboard-toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="dashboard-toggle-slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="notification-item">
+                                <div class="notification-info">
+                                    <h4>On-chain anchors</h4>
+                                    <p class="notification-description">Notify when anchors succeed or fail</p>
+                                </div>
+                                <label class="dashboard-toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="dashboard-toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline">Save preferences</button>
+                    </div>
+                </div>
+
+                <!-- Wallet & API -->
+                <div class="dashboard-settings-card">
+                    <h3>Wallet & API</h3>
+                    <div class="wallet-api-options">
+                        <div class="wallet-api-row">
+                            <div class="wallet-section">
+                                <div class="wallet-info">
+                                    <h4>Wallet connection</h4>
+                                    <p class="wallet-description">Connect MetaMask via WalletConnect</p>
+                                </div>
+                                <button class="btn btn-primary">Connect</button>
+                            </div>
+                            
+                            <div class="api-section">
+                                <div class="api-info">
+                                    <h4>API Key</h4>
+                                    <p class="api-description">Use for REST/GraphQL integrations</p>
+                                </div>
+                                <button class="btn btn-outline">Regenerate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Single Footer for All Sections -->
+            <footer class="dashboard-footer">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span>BlueCarbon</span>
+                    </div>
+                    <span class="footer-tagline">• Blockchain-Based Blue Carbon Registry & MRV</span>
+                </div>
+                <div class="footer-links">
+                    <a href="projects.html" class="footer-link">Public Explorer</a>
+                    <a href="dashboard.html" class="footer-link">Dashboard</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
